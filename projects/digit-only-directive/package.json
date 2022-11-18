@@ -1,6 +1,25 @@
 {
   "name": "@linch90/digit-only-directive",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "homepage": "https://www.unihanlin.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/linch90/digit-only-directive.git"
+  },
+  "author": {
+    "name": "linch90;晗林科技",
+    "email": "chuzhilin@unihanlin.com"
+  },
+  "description": "A angular directive to allow digit only input.",
+  "keywords": [
+    "angular",
+    "ng",
+    "directive",
+    "digit only",
+    "typescript",
+    "input"
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^14.2.0",
     "@angular/core": "^14.2.0"

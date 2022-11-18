@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
+import { DigitOnlyDirective } from './digit-only.directive';
 
 @NgModule({
-  declarations: [],
+  declarations: [DigitOnlyDirective],
   imports: [],
-  exports: [],
+  exports: [DigitOnlyDirective],
 })
 export class DigitOnlyDirectiveModule {}
