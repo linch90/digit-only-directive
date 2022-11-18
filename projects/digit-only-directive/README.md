@@ -24,9 +24,9 @@ import { DigitOnlyDirectiveModule } from "@linch90/digit-only-directive";
 
 # API
 
-**Selector**
+### Selector
 
-#### _input[digitOnly],textarea[digitOnly]_
+_input[digitOnly],textarea[digitOnly]_
 
 | Name             | Description                                                     |
 | ---------------- | --------------------------------------------------------------- |
