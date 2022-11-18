@@ -1,27 +1,37 @@
 # DigitOnlyDirective
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
+A angular directive to allow digit only input.
 
-## Development server
+**Module**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```typescript
+import { DigitOnlyDirectiveModule } from "@linch90/digit-only-directive";
+```
 
-## Code scaffolding
+# Example
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[Stackblitz](https://stackblitz.com/edit/digit-only)
 
-## Build
+```html
+<input
+  type="text"
+  class="form-control"
+  id="digitOnlyInput"
+  digitOnly
+  [decimal]="true"
+/>
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# API
 
-## Running unit tests
+**Selector**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### _input[digitOnly],textarea[digitOnly]_
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+| Name             | Description                                                     |
+| ---------------- | --------------------------------------------------------------- |
+| decimal          | default: `false`, if support decimal                            |
+| decimalSeparator | `'.'`, the separator of decimal                                 |
+| min              | `-Infinity`, the min value that allowed                         |
+| max              | `Infinity`, the max value that allowed                          |
+| pattern          | `string \| RegExp \| undefined`, the digit pattern that allowed |

@@ -31,7 +31,7 @@ export class DigitOnlyDirective implements OnChanges {
   @Input() decimalSeparator = '.';
   @Input() min = -Infinity;
   @Input() max = Infinity;
-  @Input() pattern?: string | RegExp;
+  @Input() pattern: string | RegExp | undefined;
   private regex: RegExp | null = null;
   inputElement: HTMLInputElement;
 
@@ -40,7 +40,6 @@ export class DigitOnlyDirective implements OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('changes', changes);
     if (changes['pattern']) {
       this.regex = this.pattern ? RegExp(this.pattern) : null;
     }
@@ -67,14 +66,8 @@ export class DigitOnlyDirective implements OnChanges {
     }
   }
 
-  @HostListener('compositionend', ['$event'])
-  onCompositionEnd(e: CompositionEvent) {
-    console.log('composition end', e);
-  }
-
   @HostListener('keydown', ['$event'])
   onKeyDown(e: KeyboardEvent): any {
-    console.log('onkeydown', e);
     if (
       this.navigationKeys.indexOf(e.key) > -1 || // Allow: navigation keys: backspace, delete, arrows etc.
       ((e.key === 'a' || e.code === 'KeyA') && e.ctrlKey === true) || // Allow: Ctrl+A
